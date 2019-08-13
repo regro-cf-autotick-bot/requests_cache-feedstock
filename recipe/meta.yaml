@@ -1,5 +1,5 @@
 {% set name = "requests_cache" %}
-{% set version = "0.4.13" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace("_", "-" ) }}-{{ version }}.tar.gz
-  sha256: fe561ca119879bbcfb51f03a35e35b425e18f338248e59fd5cf2166c77f457a2
+  sha256: b423d1eb16e8fbc99e0280e618a2676d33c8aba77652a08b740e97fc9ffc627f
 
 build:
   noarch: python
