@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About requests_cache
 ====================
 
@@ -19,8 +15,15 @@ Requests-cache is a transparent persistent cache for requests (version >= 1.1.0)
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/requests_cache-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/requests_cache-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6222&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/requests_cache-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
