@@ -6,23 +6,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace("_", "-" ) }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace("_", "-" ) }}-{{ version }}.tar.gz
   sha256: fe561ca119879bbcfb51f03a35e35b425e18f338248e59fd5cf2166c77f457a2
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - requests >=1.1.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - requests_cache
     - requests_cache.backends
